@@ -1,0 +1,76 @@
+<view class="play">
+  <view class="play_btn">
+    <!-- <image src="{{img}}"></image> -->
+  </view>
+  <view class="header">
+  <view class="music_title"><text>{{songName}}</text></view>
+    <view class="play_img {{isShow?'show':'hide'}} {{tag?'':'an'}}" bindtap='toAttention' >
+       <image src="{{img}}"></image>
+    </view>
+    <!-- 显示歌词列表 -->
+    <view class="lyaric {{isShow?'hide':'show'}}" bindtap="showTag">
+      <view class="music_list {{showLyr?'show':'hide'}}" style="top:{{top}}px;">
+        <view class="music_item {{count===index?'active':''}}" wx:for="{{lyricArr}}" wx:key="list" data-time="{{item[0]}}">{{item[1]}}</view>
+      </view>
+
+      <!-- 显示暂无歌词 -->
+       <view class="music_list {{showLyr?'hide':'show'}}" style="top:{{top}}px;">
+        <view class="music_item">{{lyricArr}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="play_controls">
+    <view class="controls_top">
+        <view class='controls_content'>
+          <view class="btn_item">
+            <image src="{{col_img}}" bindtap='cellaction'></image>
+          </view>
+          <view class="btn_item">
+            <image src="../../../image/a_i.png"></image>
+          </view>
+          <view class="btn_item">
+            <image src="../../../image/a_f.png"></image>
+            <text class="ping_jia">56</text>
+          </view>
+          <view class="btn_item">
+            <image src="../../../image/a_x.png"></image>
+          </view>
+        </view>
+    </view>
+    <view class="controls_middle">
+      <view class="time start_time">{{currentTime}}</view>
+      <view class="slid_control">
+      <view class="progress">
+          <!-- 进度条 -->
+        <view class="active-progress" style="width:{{progress}}px"></view>
+
+        <!-- 滑块 -->
+        <view class="mask" style="left:{{progress}}px">
+          <view class="circle"></view>
+        </view>
+        <!-- 事件绑定层 -->
+        <view class="layer"></view>
+      </view>
+
+      </view>
+      <view class="time end_time">{{duration}}</view>
+    </view>
+    <view class="control_bottom">
+        <view class="btn_a">
+          <image src="../../../image/a_p.png" ></image>
+        </view>
+        <view class="btn_a">
+            <image src="../../../image/ajh.png" bindtap='prev'></image>
+        </view>
+        <view class="btn_a">
+            <image src="{{url}}" bindtap='Playing'></image>
+        </view>
+        <view class="btn_a">
+            <image src="../../../image/ajb.png" bindtap='next'></image>
+        </view>
+        <view class="btn_a">
+            <image src="../../../image/aab.png"></image>
+        </view>
+    </view>
+  </view>
+</view>

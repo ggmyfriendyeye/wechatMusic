@@ -1,0 +1,15 @@
+<view class="wrap">
+   <view class="wrap_content">
+      <view class="content_top" bindtap='goPlay' data-base="{{dataList}}">
+        <image src="{{dataList.cover}}"></image>
+        <i><image src="../../../image/ajf.png"></image></i>
+      </view> 
+      <view class="content_bottom">
+        <view class="songer">艺人：{{dataList.artistName}}</view>
+        <view class="album">专辑：{{dataList.briefDesc}}</view>
+        <view class="name">{{dataList.name}}</view>
+        <view class="desc">{{dataList.desc}}</view>
+        <view class="play_content">{{dataList.playCount}}次播放</view>
+      </view>
+   </view>
+</view>

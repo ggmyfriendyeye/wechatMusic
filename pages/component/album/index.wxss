@@ -1,0 +1,150 @@
+.album{
+  width:100%;
+}
+.header{
+  width:100%;
+}
+.header_content{
+  width:95%;
+  margin:20rpx auto;
+  overflow: hidden;
+  background-image: linear-gradient(to left,rgb(236, 11, 78),rgb(109, 12, 75));
+}
+.content_left{
+  width:35%;
+  height:280rpx;
+  float:left;
+  position:relative;
+}
+.content_left image{
+  width:230rpx;
+  height:230rpx;
+  display:block;
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+  margin:auto;
+  border-radius: 8rpx;
+}
+.content_right{
+  width:65%;
+  height:280rpx;
+  float:right;
+}
+.content_right text{
+  font-size:30rpx;
+  font-weight:400;
+  font-family: "微软雅黑";
+  color:#fff;
+  padding:10rpx;
+   display:block;
+  line-height: 50rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+/* 专辑音乐列表 */
+.main{
+  width:100%;
+}
+.main_content{
+  width:95%;
+  margin:10rpx auto;
+  display:flex;
+  flex-wrap:wrap;
+  
+}
+.play_list{
+  width:100%;
+}
+.play_t{
+  width:100%;
+  height: 100rpx;
+  border:1rpx solid #ddd;
+}
+.play_left{
+  height: 100rpx;
+  line-height:100rpx;
+}
+.play_left i{
+  margin-left:15rpx;
+}
+.play_left i image{
+  display: inline-block;
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+}
+.play_left text{
+  display:inline-block;
+  font-size:32rpx;
+  color:#333;
+  font-weight: 400;
+  margin-left:15rpx;
+
+}
+.muc_list{
+  width:100%;
+}
+.muc_list_item{
+  width:95%;
+  height:120rpx;
+  margin:0 auto;
+  border-bottom:1rpx solid #ccc;
+}
+.muc_list_left{
+  width:80%;
+  height:120rpx;
+  float:left;
+}
+.list_num{
+  width:15%;
+  height:120rpx;
+  line-height:120rpx;
+  text-align:center;
+  color:#555;
+  float:left;
+}
+.list_name{
+  width:85%;
+  height:120rpx;
+  line-height:120rpx;
+  float:right;
+}
+.list_name text{
+  width:100%;
+  display:inline-block;
+  font-size:28rpx;
+  font-weight:500;
+  color:#333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.muc_list_middle{
+  width:10%;
+  height:120rpx;
+  float:left;
+}
+.muc_list_right{
+  width:10%;
+  height:120rpx;
+  float:left;
+  position:relative;
+}
+.muc_list_right image{
+  width:38rpx;
+  height:38rpx;
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}

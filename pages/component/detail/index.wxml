@@ -1,0 +1,85 @@
+<view class="detail">
+  <view class="header">
+    <view class="image">
+      <image src="{{dataList}}"></image>
+    </view>
+    <view class="header_content">
+      <view class="content_top">
+        <view class="content_left">
+          <view class="content_img">
+             <image src="{{dataList}}"></image>
+          </view>
+        </view>
+        <view class="content_right">
+          <view class="right_top">
+            <text>{{name}}</text>
+          </view>
+          <view class="right_bottom">
+            <text>{{description}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="content_bottom">
+      <!-- --- -->
+        <view class="content_btn-bar">
+          <view class="btn_img">
+             <view class="image_top">
+               <image src="../../../image/w7.png"></image>
+             </view>
+            <view class="btn_text">234</view>
+          </view>
+          
+        </view>
+        <!-- ----- -->
+        <view class="content_btn-bar">
+          <view class="btn_img">
+           <view class="image_top">
+               <image src="../../../image/w3.png"></image>
+             </view>
+            <view class="btn_text">8</view>
+          </view>
+        
+        </view>
+        <!-- -------- -->
+        <view class="content_btn-bar">
+          <view class="btn_img">
+            <view class="image_top">
+               <image src="../../../image/wd.png"></image>
+             </view>
+            <view class="btn_text">1</view>
+          </view>
+         
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 播放列表 -->
+  <view class="list">
+   <view class="list_title">
+      <view class="list_bar">
+        <image src="../../../image/pl-playall.png"></image>
+      </view>
+      <view class="list_text">播放全部 <text>(共{{tracks.length}}首)</text></view>
+   </view>
+   <view class="list_content">
+     <view class="list_bar_item" wx:for="{{tracks}}" wx:key="i" >
+       <view class="list_bar_left">
+        {{index+1}}
+       </view>
+       <view class="list_bar_right">
+          <view class="list_tite_text">
+          <view class="songer_name">
+            <text>{{item.name}} {{item.alia[0]}}</text>
+          </view>
+          <view class="songer_msg">
+            <text>{{item.ar[0].name}}—{{item.al.name}}</text>
+          </view>
+          </view>
+          <view class="list_bar_control">
+            <image src="../../../image/cm2_list_btn_icn_mv_new@2x.png" bindtap='goPath' data-lists="{{item}}" data-index ="{{index}}"></image>
+          </view>
+       </view>
+     </view>
+   </view>
+  </view>
+</view>

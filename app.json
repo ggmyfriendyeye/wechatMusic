@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/component/index/index",
+    "pages/component/fm/index",
+    "pages/component/search/index",
+    "pages/component/detail/index",
+    "pages/component/play/index",
+    "pages/component/songer/index",
+    "pages/component/album/index",
+    "pages/component/mv/index",
+    "pages/component/pmv/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Music",
+    "backgroundColor": "#fbfcfd",
+    "navigationBarBackgroundColor": "#BB2C08"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#fff",
+    "borderStyle": "black",
+    "backgroundColor": "#212121",
+    "list": [
+      {
+        "pagePath": "pages/component/index/index",
+        "text": "发现音乐",
+        "iconPath": "image/cm2_btm_icn_music.png",
+        "selectedIconPath": "image/cm2_btm_icn_music_prs.png"
+      },
+      {
+        "pagePath": "pages/component/fm/index",
+        "text": "私人MV",
+        "iconPath": "image/cm2_btm_icn_radio.png",
+        "selectedIconPath": "image/cm2_btm_icn_radio_prs.png"
+      },
+      {
+        "pagePath": "pages/component/search/index",
+        "iconPath": "image/cm2_btm_icn_account.png",
+        "selectedIconPath": "image/cm2_btm_icn_account_prs.png",
+        "text": "账号"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "requiredBackgroundModes": [
+    "audio",
+    "backgroundAudioManager"
+  ],
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

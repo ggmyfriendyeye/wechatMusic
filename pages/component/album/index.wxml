@@ -1,0 +1,40 @@
+<view class="album">
+   <view class="header">
+      <view class="header_content">
+         <view class="content_left">
+            <image src="{{album.blurPicUrl}}"></image>
+         </view>
+         <view class="content_right">
+           <text>{{album.briefDesc}}</text>
+         </view>
+      </view>
+   </view>
+   <view class="main">
+      <view class="main_content">
+        <view class="play_list">
+          <view class="play_t">
+            <view class="play_left">
+            <i><image src="../../../image/播放.png"></image></i>
+            <text>播放全部</text>
+            </view>
+          </view>
+
+          <view class="muc_list">
+            <view class="muc_list_item" wx:for="{{songList}}" wx:key="index">
+              <view class="muc_list_left" data-base="{{item}}" data-index="{{index}}" bindtap='goPath'>
+                <view class="list_num">{{index + 1}}</view>
+                <view class="list_name">
+                <text>{{item.name}}</text>
+                <!-- <i><image src="../../../image/hq-line.png"></image></i> -->
+                </view>
+              </view>
+              <view class="muc_list_middle"></view>
+              <view class="muc_list_right">
+                <image src="../../../image/圆点菜单.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view> 
+   </view>
+</view>

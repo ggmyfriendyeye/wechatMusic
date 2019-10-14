@@ -1,0 +1,54 @@
+.wrap{
+  width:100%;
+}
+.wrap_content{
+  width:95%;
+  margin:20rpx auto;
+}
+.content_top{
+  width:100%;
+  height:480rpx;
+  margin-bottom:20rpx;
+  position:relative;
+}
+.content_top i{
+  position:absolute;
+  right:20rpx;
+  bottom:20rpx;
+}
+.content_top > i > image{
+ width:96rpx;
+ height:96rpx;
+ border-radius:50%;
+}
+.content_top > image{
+  width:100%;
+  height:100%;
+  border-radius: 8rpx;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.content_bottom{
+  width:100%;
+  /* height:280rpx; */
+  border-radius: 8rpx;
+  background:rgb(230, 224, 224);
+}
+.content_bottom view{
+  display:block;
+  width:100%;
+  line-height:40rpx;
+ font-family: "微软雅黑";
+  font-size:32rpx;
+  padding:10rpx;
+}
+.songer,
+.name,
+.album,
+.desc{
+  color:#444;
+}
+.play_content{
+  color:#555;
+}

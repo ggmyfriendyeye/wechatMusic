@@ -1,0 +1,160 @@
+<view class="wrap">
+  <view class="index">
+    <view id="header" class="header">
+        <view class='header-left'><image src="../../../image/菜单.png" width="50" height="50" bindtap='layout'></image></view>
+        <view class="header-middle">
+          <view class="middle-btn" >
+              <view class="tab  {{deskIndex==0?'active':''}}" data-index='{{0}}' catchtap='changeTab'>推存</view>
+              <view class="tab  {{deskIndex==1?'active':''}}" data-index='{{1}}' catchtap='changeTab'>精品</view>
+          </view>
+        </view>
+        <view class="header-right"><image src="../../../image/搜索.png" bindtap='goPast'></image></view>
+    </view>
+    <!-- 路由切换显示区域 -->
+
+    <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}">
+      <!-- 推存 -->
+      <swiper-item class="swiper-item">
+        <scroll-view class='scroll' scroll-y>
+        <!-- 轮播图 -->
+          <view class="slid">
+            <swiper indicator-dots="true" class="banner"
+            autoplay="true" interval="4000" duration="100"
+            >
+              <block wx:for="{{banners}}" wx:key="index1" wx:for-item="item">
+                <swiper-item>
+                  <image src="{{item.pic}}" class="slide-image" width="355" height="200"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+          <view class="nav-bar">
+            <view wx:for="{{ nvaData}}" wx:key="index2" wx:for-item="item" class="nav-item">
+              <view>
+                  <image src="{{item.url}}"></image>
+              </view>
+              <text>{{item.text}}</text>
+            </view>
+          </view>
+          <view class="songList">
+          <view class="song_title">
+            <view class="title_left">推存歌单</view>
+            <view class="title_right">更多</view>
+          </view>
+          <view class="songer_bar">
+            <view class="songer_bar_item" wx:for="{{songList}}" bindtap='goPath' wx:key="index3" wx:for-item="item" data-index="{{item.id}}">
+              <view class=" songer_bar_top">
+                  <image src="{{item.picUrl}}"></image>
+              </view>
+              <view class="songer_bar_bottom">
+                  <text>{{item.name}}</text>
+              </view>
+            </view>
+          </view>
+          </view>
+          
+        </scroll-view>
+      </swiper-item>
+        <!--精品歌单 -->
+        <swiper-item class="swiper-item">
+        <scroll-view class='scroll' scroll-y>
+            <!-- 轮播图 -->
+          <view class="slid">
+            <swiper indicator-dots="true" class="banner"
+            autoplay="true" interval="4000" duration="100"
+            >
+              <block wx:for="{{diantai}}" wx:key="index1" wx:for-item="item">
+                <swiper-item>
+                  <image src="{{item.pic}}" class="slide-image" width="355" height="200"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+          <!-- 歌单 -->
+          <view class="radio">
+              <view class="radio_title">
+                <text class="tilte_text">精品推存</text>
+              </view>
+              <view class="radio_content">
+                <view class="radio_item" wx:for="{{playlist}}" wx:key="lis" data-index="{{item.id}}" bindtap='goPath'>
+                  <view class="radio_top">
+                    <image src="{{item.coverImgUrl}}"></image>
+                  </view>
+                  <view class="radio_bottom">
+                      <view class="top_text">
+                      <text>{{item.name}}</text>
+                      </view>
+                  </view>
+                </view>
+
+              </view>
+          </view>
+        
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  
+  <!-- 菜单页面 -->
+  <view class="drop_down {{showBar?'show_tab':'hide_tab'}}">
+    <view class="drop_bar">
+        <view class="my_bar">
+         <view class="left">
+            <i>
+              <image src="../../../image/信息.png"></image>
+            </i>
+            <text>我的消息</text>
+         </view>
+         <view class="right">
+           <i><image src="../../../image/右.png"></image></i>
+         </view>
+        </view>
+        <view class="my_bar">
+         <view class="left">
+            <i>
+              <image src="../../../image/礼物.png"></image>
+            </i>
+            <text>福利专区</text>
+         </view>
+         <view class="right">
+           <i><image src="../../../image/右.png"></image></i>
+         </view>
+        </view>
+        <view class="my_bar">
+         <view class="left">
+            <i>
+              <image src="../../../image/icn_vip_pro_36.png"></image>
+            </i>
+            <text>会员中心</text>
+         </view>
+         <view class="right">
+           <i><image src="../../../image/右.png"></image></i>
+         </view>
+        </view>
+        <view class="my_bar">
+         <view class="left">
+            <i>
+              <image src="../../../image/红包.png"></image>
+            </i>
+            <text>抢红包</text>
+         </view>
+         <view class="right">
+           <i><image src="../../../image/右.png"></image></i>
+         </view>
+        </view>
+        <view class="my_bar">
+         <view class="left">
+            <i>
+              <image src="../../../image/收藏.png"></image>
+            </i>
+            <text>我的收藏</text>
+         </view>
+         <view class="right">
+           <i><image src="../../../image/右.png"></image></i>
+         </view>
+        </view>
+    </view>
+    <view class="drop_right"  bindtap='dropDown'></view>
+  </view>
+   
+</view>

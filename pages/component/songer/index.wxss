@@ -1,0 +1,123 @@
+.header{
+  width:100%;
+  height:480rpx;
+  position:relative;
+}
+.header .cover{
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.cover image{
+  width:100%;
+  height:100%;
+}
+.bottom_text{
+  width:100%;
+  position:absolute;
+  left:0;
+  bottom:10rpx;
+}
+.text_left{
+  color:#fff;
+  font-size:36rpx;
+  font-weight: 600;
+  padding:0 20rpx;
+  font-family: '宋体';
+}
+
+/* 播放列表 */
+.play_list{
+  width:100%;
+}
+.play_t{
+  width:100%;
+  height: 100rpx;
+  border:1rpx solid #ddd;
+}
+.play_left{
+  height: 100rpx;
+  line-height:100rpx;
+}
+.play_left i{
+  margin-left:15rpx;
+}
+.play_left i image{
+  display: inline-block;
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+}
+.play_left text{
+  display:inline-block;
+  font-size:32rpx;
+  color:#333;
+  font-weight: 400;
+  margin-left:15rpx;
+
+}
+.muc_list{
+  width:100%;
+}
+.muc_list_item{
+  width:95%;
+  height:120rpx;
+  margin:0 auto;
+  border-bottom:1rpx solid #ccc;
+}
+.muc_list_left{
+  width:80%;
+  height:120rpx;
+  float:left;
+}
+.list_num{
+  width:15%;
+  height:120rpx;
+  line-height:120rpx;
+  text-align:center;
+  color:#555;
+  float:left;
+}
+.list_name{
+  width:85%;
+  height:120rpx;
+  line-height:120rpx;
+  float:right;
+}
+.list_name text{
+  display:inline-block;
+  font-size:28rpx;
+  font-weight:500;
+  vertical-align: middle;
+  color:#333;
+}
+.list_name image{
+  width:42rpx;
+  height:42rpx;
+  display:inline-block;
+  vertical-align: middle;
+  padding: 0 10rpx;
+}
+.muc_list_middle{
+  width:10%;
+  height:120rpx;
+  float:left;
+}
+.muc_list_right{
+  width:10%;
+  height:120rpx;
+  float:left;
+  position:relative;
+}
+.muc_list_right image{
+  width:38rpx;
+  height:38rpx;
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}

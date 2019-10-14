@@ -1,0 +1,120 @@
+<view class="wrap">
+   <view class="header">
+      <view class="search_btn">
+        <input class=""  placeholder="请输入关键字" value="{{searchValue}}"  bindinput ="changeInputVal"/>  
+        <icon class="searchcion" size='20' type='search' bindtap='Search'></icon>  
+      </view>  
+    </view>
+    <view class='container'>
+  <view class='top'>
+    <view class="tab  {{deskIndex==0?'active':''}}" data-index='{{0}}' catchtap='changeTab'>单曲</view>
+    <view class="tab  {{deskIndex==1?'active':''}}" data-index='{{1}}' catchtap='changeTab'>歌手</view>
+    <view class="tab  {{deskIndex==2?'active':''}}" data-index='{{2}}' catchtap='changeTab'>专辑</view>
+    <view class="tab  {{deskIndex==3?'active':''}}" data-index='{{3}}' catchtap='changeTab'>MV</view>
+  </view>
+  <swiper class='seiperTab' current="{{currentIndex}}" indicator-dots="{{false}}" bindchange="bindchange">
+    <!--单曲-->
+    <swiper-item>
+      <scroll-view class='scroll' scroll-y>
+        <view class="slid_list">
+            <view class="list_left">
+              <view class="list_left_item" wx:for="{{hot1}}" wx:key="hot1" data-text="{{item}}" bindtap='changeDate'>{{index + 1}}.{{item}}</view>
+            </view>
+            <view class="list_right">
+              <view class="list_right_item" wx:for="{{hot2}}" wx:key="hot2" data-text="{{item}}" bindtap='changeDate'>{{index + 6}}.{{item}}</view>
+            </view>
+        </view>
+        <view class="music_list {{beginShow?'show':'hide'}}">
+           <view class="music_play_item" wx:for="{{song}}" wx:key="in" >
+            <view class="music_name" data-list="{{item}}" data-index="{{index}}" bindtap='goPath'>
+               <view class="song_name">{{item.name}}</view>
+               <view class="songer_name">
+               <i><image src="../../../image/hq-line.png"></image></i>
+               <text>{{item.artists[0].name}}</text>
+               </view>
+            </view>
+            <view class="music_btn">
+              <view ></view>
+              <view class="play_out">
+               <image src="../../../image/圆点菜单.png"></image>
+              </view>
+            </view>
+           </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+   <!-- 歌手 -->
+    <swiper-item>
+      <scroll-view class='scroll' scroll-y>
+        <view class="slid_list">
+          <view class="list_left">
+            <view class="list_left_item" wx:for="{{songer1}}" wx:key="songer1" data-text="{{item}}" bindtap='changeDate'>{{index + 1}}.{{item}}</view>
+          </view>
+          <view class="list_right">
+            <view class="list_right_item" wx:for="{{songer2}}" wx:key="songer2" data-text="{{item}}" bindtap='changeDate'>{{index + 6}}.{{item}}</view>
+          </view>
+        </view>
+        <view class="songer_bar">
+            <view class="songer_bar_item" wx:for="{{songerList}}" data-list="{{item}}" data-index="{{index}}" wx:key="k" bindtap='getPath'>
+               <view class="songer_img">
+                  <image src="{{item.picUrl}}"></image>
+               </view>
+               <view class="songer_text">
+                <view class="song_name">
+                  <text>{{item.name}}</text>
+                </view>
+               </view>
+            </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  <!-- 专辑 -->
+    <swiper-item>
+      <scroll-view class='scroll' scroll-y>
+        <view class="slid_list">
+          <view class="list_left">
+            <view class="list_left_item" wx:for="{{zhuanJi1}}" wx:key="so1" data-text="{{item}}" bindtap='changeDate'>{{index + 1}}.{{item}}</view>
+          </view>
+          <view class="list_right">
+            <view class="list_right_item" wx:for="{{zhuanJi2}}" wx:key="so2" data-text="{{item}}" bindtap='changeDate'>{{index + 6}}.{{item}}</view>
+          </view>
+        </view>
+         <view class="songer_bar">
+            <view class="songer_bar_item" wx:for="{{albumList}}" wx:key="k"  data-album="{{item}}" bindtap="goPast">
+               <view class="songer_img">
+                  <image src="{{item.picUrl}}"></image>
+               </view>
+               <view class="songer_text">
+                <view class="song_name">
+                  <text>{{item.name}}</text>
+                </view>
+               </view>
+            </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+<!-- MV -->
+    <swiper-item>
+      <scroll-view class='scroll' scroll-y>
+        <view class="slid_list">
+          <view class="list_left">
+            <view class="list_left_item" wx:for="{{fm}}" wx:key="so1" data-text="{{item}}" bindtap='changeDate'>{{index + 1}}.{{item}}</view>
+          </view>
+        </view>
+        <view class="songer_bar">
+            <view class="songer_bar_item" wx:for="{{mvList}}" wx:key="k" bindtap="goHost" data-base="{{item.id}}">
+               <view class="songer_img">
+                  <image src="{{item.cover}}"></image>
+               </view>
+               <view class="songer_text">
+                <view class="song_name">
+                  <text>{{item.name}}</text>
+                </view>
+               </view>
+            </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    </swiper>
+</view>
+</view>

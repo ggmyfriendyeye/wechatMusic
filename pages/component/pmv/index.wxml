@@ -1,0 +1,16 @@
+<view class="wrap">
+  <view class="tab1">
+   <view class="content">
+      <view class="section">
+        <video id="myVideo" src="{{url}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+        <view class="btn-area">
+        <!-- <button type="primary" bindtap="videoPlay">播放</button>
+        <button type="primary" bindtap="videoPause">暂停</button> -->
+        <input class="input" bindblur="bindInputBlur" placeholder="请输入弹幕内容"/>
+        <button bindtap="bindButtonTap">获取视频</button>
+        <button bindtap="bindSendDanmu">发送弹幕</button>
+      </view>
+      </view>
+   </view>
+  </view>
+</view>
